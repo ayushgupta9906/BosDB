@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
                 target: 'database',
                 description: `Reverted ${Math.abs(targetRevision || 0)} revision(s) back`
             }] as any[],
-            targetCommit.snapshot || { schema: { tables: {} }, data: { tables: {} }, timestamp: new Date() }
+            (targetCommit as any).snapshot || { schema: { tables: {} }, data: { tables: {} }, timestamp: new Date() }
         );
 
         if (!revertCommit.success) {

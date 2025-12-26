@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Editor from '@monaco-editor/react';
 import { useTheme } from 'next-themes';
-import { Play, Save, Download, Clock, Table as TableIcon, Database, ChevronRight, ChevronDown, GitBranch, MoreVertical } from 'lucide-react';
+import { Play, Save, Download, Clock, Table as TableIcon, Database, ChevronRight, ChevronDown, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import { trackChange, parseQueryForChanges, getPendingChanges } from '@/lib/vcs-helper';
 import ContextMenu, { MenuItem } from '@/components/ContextMenu';
